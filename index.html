@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Tracker</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=delete" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Montserrat', sans-serif;" class="bg-[#e7ecf1]">
+      <header class="w-4/5 mx-auto mt-10">
+         <h1 class="font-bold text-2xl text-sky-600">
+         Job Application Tracker
+       </h1>
+
+       <div class="flex justify-between gap-3 mt-5">
+        <div class="bg-white w-3/10 px-4 py-1 rounded-md">
+          <p>Total</p>
+          <p id="total" class="font-bold">0</p>
+        </div>
+        <div class="bg-white w-3/10 px-4 py-1 rounded-md">
+          <p>Interview</p>
+          <p id="intCount" class="font-bold text-green-700">0</p>
+        </div>
+        <div class="bg-white w-3/10 px-4 py-1 rounded-md">
+          <p>Rejected</p>
+          <p id="rejCount" class="font-bold text-red-600">0</p>
+        </div>
+       
+
+       </div>
+
+      </header>
+
+      <section id="available" class="w-4/5 mx-auto flex justify-between mt-5">
+             <p class="font-bold text-blue-700">Available Jobs</p>
+
+             <p class="text-sm font-bold"><span id="avn">8</span> Jobs</p>
+
+      </section>
+
+      <section id="buttons" class="mt-5 w-4/5 mx-auto flex gap-2">
+        <button id="showAll" class="bg-white px-3 py-1 rounded-sm font-semibold transition-all duration-300 hover:bg-blue-600 cursor-pointer active:scale-90">
+           All
+        </button>
+        <button id="ShowInt" class="bg-white px-3 py-1 rounded-sm font-semibold transition-all duration-300 hover:bg-blue-600 cursor-pointer active:scale-90">
+           Interview
+        </button>
+        <button id="showRej" class="bg-white px-3 py-1 rounded-sm font-semibold transition-all duration-300 hover:bg-blue-600 cursor-pointer active:scale-90">
+            Rejected
+        </button>
+
+      </section>
+
+      <section id="jobs" class="w-4/5 mx-auto flex flex-col gap-6 my-4">
+
+
+        <div  class="card flex justify-between bg-white rounded-md px-5 py-4">
+        <div class="flex flex-col gap-1">
+          <h1 class="font-bold text-sky-700">Mobile First Corp</h1>
+
+          <p class="text-gray-400">React Native Developer</p>
+
+          <p class="font-bold">Salary : $5000-$75000</p>
+
+          <p  class="bg-slate-200 w-35 px-4 py-1 my-2 status">Not Applied</p>
+
+          <p class="text-gray-400 text-start my-3">React Native developers focus on creating smooth user interfaces, managing app state, integrating APIs, and optimizing performance for mobile devices</p>
+
+          <div class="flex gap-3">
+            <button class="int border text-green-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-green-500 hover:text-white active:scale-90">Interview</button>
+            <button class="rej border text-red-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-red-500 hover:text-white active:scale-90">Rejected</button>
+            
+          </div>
+        </div>
+
+        <div>
+           <span class="material-symbols-outlined hover:cursor-pointer active:scale-90">
+             delete
+           </span>
+        </div>
+        </div>
+
+
+        <div  class="card flex justify-between bg-white rounded-md px-5 py-4">
+        <div class="flex flex-col gap-1">
+          <h1 class="font-bold text-sky-700">Web Developer</h1>
+
+          <p class="text-gray-400">Creates and manages websites and web apps.</p>
+
+          <p class="font-bold">Salary : $35000-$75000</p>
+
+          <p  class="bg-slate-200 w-35 px-4 py-1 my-2 status">Not Applied</p>
+
+           <p class="text-gray-400 text-start my-3">React Native developers focus on creating smooth user interfaces, managing app state, integrating APIs, and optimizing performance for mobile devices</p>
+
+          <div class="flex gap-3">
+            <button class="int border text-green-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-green-500 hover:text-white active:scale-90">Interview</button>
+            <button class="rej border text-red-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-red-500 hover:text-white active:scale-90">Rejected</button>
+            
+          </div>
+        </div>
+
+        <div>
+           <span class="material-symbols-outlined hover:cursor-pointer active:scale-90">
+             delete
+           </span>
+        </div>
+        </div>
+
+
+
+        <div  class="card flex justify-between bg-white rounded-md px-5 py-4">
+        <div class="flex flex-col gap-1">
+          <h1 class="font-bold text-sky-700">Software Developer</h1>
+
+          <p class="text-gray-400">Builds and maintains software applications.</p>
+
+          <p class="font-bold">Salary : $25000-$75000</p>
+
+          <p  class="bg-slate-200 w-35 px-4 py-1 my-2 status">Not Applied</p>
+
+          <p class="text-gray-400 text-start my-3">A Software Developer designs and builds computer programs and applications.
+         They write, test, and maintain code to ensure software works properly.
+             </p>
+          <div class="flex gap-3">
+            <button class="int border text-green-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-green-500 hover:text-white active:scale-90">Interview</button>
+            <button class="rej border text-red-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-red-500 hover:text-white active:scale-90">Rejected</button>
+            
+          </div>
+        </div>
+
+        <div>
+           <span class="material-symbols-outlined hover:cursor-pointer active:scale-90">
+             delete
+           </span>
+        </div>
+        </div>
+
+
+
+       <div  class="card flex justify-between bg-white rounded-md px-5 py-4">
+  <div class="flex flex-col gap-1">
+    <h1 class="font-bold text-sky-700">Mobile App Developer</h1>
+
+    <p class="text-gray-400">Builds mobile applications for Android and iOS devices.</p>
+
+    <p class="font-bold">Salary : $30000-$90000</p>
+
+    <p  class="bg-slate-200 w-35 px-4 py-1 my-2 status">Not Applied</p>
+
+    <p class="text-gray-400 text-start my-3">
+      A Mobile App Developer designs and develops applications for smartphones and tablets.
+      They use technologies like React Native, Flutter, or native platforms to create smooth and user-friendly apps.
+    </p>
+
+    <div class="flex gap-3">
+      <button class="int border text-green-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-green-500 hover:text-white active:scale-90">Interview</button>
+      <button class="rej border text-red-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-red-500 hover:text-white active:scale-90">Rejected</button>
+    </div>
+  </div>
+
+  <div>
+    <span class="material-symbols-outlined hover:cursor-pointer active:scale-90">
+      delete
+    </span>
+  </div>
+</div>
+
+
+       <div  class=" card flex justify-between bg-white rounded-md px-5 py-4">
+  <div class="flex flex-col gap-1">
+    <h1 class="font-bold text-sky-700">AI / ML Engineer</h1>
+
+    <p class="text-gray-400">Develops intelligent systems using Artificial Intelligence and Machine Learning.</p>
+
+    <p class="font-bold">Salary : $40000-$120000</p>
+
+    <p  class="bg-slate-200 w-35 px-4 py-1 my-2 status">Not Applied</p>
+
+    <p class="text-gray-400 text-start my-3">
+      An AI / ML Engineer builds smart models that can learn from data and make predictions.
+      They work with algorithms, neural networks, and large datasets to create intelligent applications.
+      They test, optimize, and deploy machine learning models for real-world solutions.
+    </p>
+
+    <div class="flex gap-3">
+      <button class="int border text-green-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-green-500 hover:text-white active:scale-90">Interview</button>
+      <button class="rej border text-red-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-red-500 hover:text-white active:scale-90">Rejected</button>
+    </div>
+  </div>
+
+  <div>
+    <span class="material-symbols-outlined hover:cursor-pointer active:scale-90">
+      delete
+    </span>
+  </div>
+</div>
+
+       <div  class=" card flex justify-between bg-white rounded-md px-5 py-4">
+  <div class="flex flex-col gap-1">
+    <h1 class="font-bold text-sky-700">Data Analyst</h1>
+
+    <p class="text-gray-400">Analyzes data to provide insights for business decisions.</p>
+
+    <p class="font-bold">Salary : $50000-$100000</p>
+
+    <p  class="bg-slate-200 w-35 px-4 py-1 my-2 status">Not Applied</p>
+
+    <p class="text-gray-400 text-start my-3">
+      A Data Analyst collects, processes, and analyzes data to help organizations make
+      informed decisions. They create reports, visualize trends, and identify patterns
+      that improve business outcomes.
+    </p>
+    <div class="flex gap-3">
+      <button class="int border text-green-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-green-500 hover:text-white active:scale-90">Interview</button>
+      <button class="rej border text-red-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-red-500 hover:text-white active:scale-90">Rejected</button>
+    </div>
+  </div>
+
+  <div>
+     <span class="material-symbols-outlined hover:cursor-pointer active:scale-90">
+       delete
+     </span>
+  </div>
+</div>
+
+
+     <div  class="card flex justify-between bg-white rounded-md px-5 py-4">
+  <div class="flex flex-col gap-1">
+    <h1 class="font-bold text-sky-700">Cyber Security Analyst</h1>
+
+    <p class="text-gray-400">Protects systems and networks from cyber threats.</p>
+
+    <p class="font-bold">Salary : $60000-$120000</p>
+
+    <p  class="bg-slate-200 w-35 px-4 py-1 my-2 status">Not Applied</p>
+
+    <p class="text-gray-400 text-start my-3">
+      A Cyber Security Analyst monitors, detects, and responds to security incidents.
+      They implement security measures, analyze vulnerabilities, and ensure data protection
+      across computer systems and networks.
+    </p>
+    <div class="flex gap-3">
+      <button class="int border text-green-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-green-500 hover:text-white active:scale-90">Interview</button>
+      <button class="rej border text-red-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-red-500 hover:text-white active:scale-90">Rejected</button>
+    </div>
+  </div>
+
+  <div>
+     <span class="material-symbols-outlined hover:cursor-pointer active:scale-90">
+       delete
+     </span>
+  </div>
+</div>
+
+
+<div class="card flex justify-between bg-white rounded-md px-5 py-4">
+  <div class="flex flex-col gap-1">
+    <h1 class="font-bold text-sky-700">Ethical Hacker</h1>
+
+    <p class="text-gray-400">Tests systems to find and fix security weaknesses.</p>
+
+    <p  class="font-bold">Salary : $70000-$130000</p>
+
+    <p  class="bg-slate-200 w-35 px-4 py-1 my-2 status">Not Applied</p>
+
+    <p  class="text-gray-400 text-start my-3">
+      An Ethical Hacker, also known as a penetration tester, simulates cyberattacks to
+      identify vulnerabilities in systems, networks, and applications. They help organizations
+      strengthen security and prevent real attacks.
+    </p>
+    <div class="flex gap-3">
+      <button class="int border text-green-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-green-500 hover:text-white active:scale-90">Interview</button>
+      <button class="rej border text-red-400 px-4 py-1 transition-all duration-200 rounded-sm hover:bg-red-500 hover:text-white active:scale-90">Rejected</button>
+    </div>
+  </div>
+
+  <div>
+     <span class="material-symbols-outlined hover:cursor-pointer active:scale-90">
+       delete
+     </span>
+  </div>
+</div>
+
+      </section>
+
+      <script src="script.js">
+      </script>
+</body>
+    
+</html>
