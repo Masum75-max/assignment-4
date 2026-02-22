@@ -2,7 +2,7 @@ let rejCards = [];
 let interCards = [];
 let allCards = [];
 const avn=document.getElementById("avn");
-
+const oops=document.getElementById("oops")
 let cards = document.getElementsByClassName('card');
 for(const card of cards){
   allCards.push(card);
@@ -20,6 +20,8 @@ for(const card of allCards){
   const status =card.querySelector(".status")
 
   intBtn.addEventListener("click",function(){
+
+  
     if(!interCards.includes(card)){
       interCards.push(card);
     }
@@ -57,6 +59,13 @@ status.innerText = "Rejected";
 const showInt=document.getElementById("ShowInt");
 
 showInt.addEventListener("click",function(){
+
+     if(interCards.length===0){
+      oops.classList.remove("hidden");
+    }
+   
+       
+  
     for(const card of allCards){
       const text=card.querySelector(".status").innerText.trim();
 
@@ -72,6 +81,7 @@ showInt.addEventListener("click",function(){
 const showAll=document.getElementById("showAll");
 
 showAll.addEventListener("click",function(){
+   oops.classList.add("hidden");
     for(const card of allCards){
   
 
@@ -86,6 +96,7 @@ showAll.addEventListener("click",function(){
 const showRej=document.getElementById("showRej");
 
 showRej.addEventListener("click",function(){
+   oops.classList.add("hidden");
     for(const card of allCards){
       const text=card.querySelector(".status").innerText.trim();
 
