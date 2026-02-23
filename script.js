@@ -80,14 +80,14 @@ showInt.addEventListener("click",function(){
 
 const showAll=document.getElementById("showAll");
 
-showAll.addEventListener("click",function(){
-   oops.classList.add("hidden");
-    for(const card of allCards){
-  
+showAll.addEventListener("click",function sall(){
 
-     
-        card.classList.remove("hidden");
-     
+  if(allCards.length==0) {
+   oops.classList.remove("hidden");
+
+  }
+    for(const card of allCards){   
+        card.classList.remove("hidden");  
     }
 
     avn.innerText=allCards.length;
@@ -107,3 +107,27 @@ showRej.addEventListener("click",function(){
     avn.innerText=rejCards.length;
 })
 
+
+for (const card of allCards) {
+
+  const delBtn = card.querySelector(".del");
+
+  delBtn.addEventListener("click", function () {
+
+    
+    allCards = allCards.filter(c => c !== card);
+    interCards = interCards.filter(c => c !== card);
+    rejCards = rejCards.filter(c => c !== card);
+    
+    card.remove();
+    total.innerText = allCards.length;
+    intCount.innerText = interCards.length;
+    rejCount.innerText = rejCards.length;
+    avn.innerText = allCards.length;
+
+    if (allCards.length === 0) {
+      oops.classList.remove("hidden");
+    }
+
+  });
+}
