@@ -63,16 +63,24 @@ showInt.addEventListener("click",function(){
      if(interCards.length===0){
       oops.classList.remove("hidden");
     }
+     else{
+    oops.classList.add("hidden");
+  }
    
        
   
     for(const card of allCards){
-      const text=card.querySelector(".status").innerText.trim();
-
-      if(text!=="Interview"){
-        card.classList.add("hidden");
-      }
+     card.classList.add("hidden");
     }
+     for(const card of allCards){
+     const text=card.querySelector(".status").innerText.trim();
+
+     if(text==="Interview"){
+      card.classList.remove("hidden");
+     }
+    }
+
+  
 
     avn.innerText=interCards.length;
 })
@@ -86,6 +94,9 @@ showAll.addEventListener("click",function sall(){
    oops.classList.remove("hidden");
 
   }
+  else{
+    oops.classList.add("hidden");
+  }
     for(const card of allCards){   
         card.classList.remove("hidden");  
     }
@@ -96,14 +107,24 @@ showAll.addEventListener("click",function sall(){
 const showRej=document.getElementById("showRej");
 
 showRej.addEventListener("click",function(){
-   oops.classList.add("hidden");
-    for(const card of allCards){
-      const text=card.querySelector(".status").innerText.trim();
 
-      if(text!=="Rejected"){
-        card.classList.add("hidden");
-      }
+   if(rejCards.length==0) {
+   oops.classList.remove("hidden");
+  }
+   else{
+    oops.classList.add("hidden");
+  }
+    for(const card of allCards){
+     card.classList.add("hidden");
     }
+     for(const card of allCards){
+     const text=card.querySelector(".status").innerText.trim();
+
+     if(text==="Rejected"){
+      card.classList.remove("hidden");
+     }
+    }
+
     avn.innerText=rejCards.length;
 })
 
