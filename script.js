@@ -119,7 +119,7 @@ showRej.addEventListener("click",function(){
     }
      for(const card of allCards){
      const text=card.querySelector(".status").innerText.trim();
-
+       
      if(text==="Rejected"){
       card.classList.remove("hidden");
      }
@@ -152,3 +152,10 @@ for (const card of allCards) {
 
   });
 }
+
+for(const card of allCards){
+  const status=card.querySelector(".status");
+
+  console.log(status);
+}
+
